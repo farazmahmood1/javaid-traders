@@ -1,7 +1,11 @@
 import data from '../data/products.json'
+import { PRODUCT_OVERRIDES } from '../data/product-overrides'
 
 export const CATEGORIES = data.categories
-export const PRODUCTS = data.products
+export const PRODUCTS = data.products.map((product) => ({
+  ...product,
+  ...PRODUCT_OVERRIDES[product.slug],
+}))
 export const META = data.meta
 
 const bySlug = new Map(PRODUCTS.map((p) => [p.slug, p]))
