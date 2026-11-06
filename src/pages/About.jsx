@@ -10,7 +10,7 @@ import { IconBox, IconShield, IconTag, IconTruck, IconWhatsApp } from '../compon
 export default function About() {
   usePageMeta(
     'About Us',
-    `${SITE.name} (${SITE.tagline}) — ${SITE.slogan}. Pharmaceutical, cosmetic and food packaging supplier at ${SITE.address}.`
+    `${SITE.name} (${SITE.tagline}) — ${SITE.slogan}. Cosmetic, skincare and food packaging supplier at ${SITE.address}.`
   )
 
   return (
@@ -27,14 +27,14 @@ export default function About() {
               </h1>
               <p>
                 {SITE.name}, also known as {SITE.tagline}, supplies high quality bottles, jars,
-                capsules and cosmetic packaging from {SITE.address}. Pharmaceutical, cosmetic and
+                tubes and cosmetic packaging from {SITE.address}. Cosmetic, skincare and
                 food packing items are available under one roof — in retail and in bulk.
               </p>
               <p>
-                Our range covers air-tight pharma jars for capsules, tablets and powders; acrylic
-                and PP cream jars; glass and PET serum bottles; oil and shampoo bottles with pumps,
-                flip-tops and sprays; empty cosmetic tubes; airless bottles; food and honey jars;
-                packing pouches; and filling and packing machinery.
+                Our range covers airless bottles; pump, lotion and feeder bottles; spray, mist and
+                nozzle bottles; glass serum and dropper bottles; roll-on and eye roller bottles;
+                jars, tins and candle jars; lip gloss and mascara tubes; sun block bottles and
+                salt grinders.
               </p>
               <p className="urdu">
                 جے ڈی ٹریڈر (جواد بوتل اسٹور) — اعتماد کا نام۔ ہم شاہ عالم مارکیٹ، لاہور سے اعلیٰ
@@ -44,7 +44,7 @@ export default function About() {
               </p>
               <div className="d-flex flex-wrap gap-2 mt-4">
                 <Link to="/shop" className="btn btn-primary rounded-3 px-4">
-                  Browse {PRODUCTS.length}+ products
+                  Browse {PRODUCTS.length} products
                 </Link>
                 <a
                   href={chatLink()}

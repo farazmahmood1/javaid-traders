@@ -9,7 +9,6 @@ import 'swiper/css/pagination'
 import {
   CATEGORIES,
   PRODUCTS,
-  dealProducts,
   featuredProducts,
   newArrivals,
   queryProducts,
@@ -35,31 +34,31 @@ import {
 
 const HERO = [
   {
-    kicker: 'Pharmaceutical Packaging',
-    title: 'Jars, capsules & containers — wholesale rates',
-    text: 'Air-tight pharma jars for capsules, tablets, powders and supplements. Bulk quantities available.',
-    cta: '/category/pharma-jar',
-    cat: 'pharma-jar',
+    kicker: 'Airless Bottles',
+    title: 'Airless pumps that keep formulas fresh',
+    text: 'Airless bottles in 30ml and 50ml — acrylic, widemouth and gold-ring styles for serums, lotions and creams.',
+    cta: '/category/airless-bottles',
+    cat: 'airless-bottles',
   },
   {
-    kicker: 'Cosmetic Packaging',
-    title: 'Serum bottles, cream jars & airless pumps',
-    text: 'Glass and PET serum bottles, acrylic cream jars and airless bottles in every size and finish.',
-    cta: '/category/serum-bottel',
-    cat: 'serum-bottel',
+    kicker: 'Serum & Dropper Bottles',
+    title: 'Serum bottles in every finish',
+    text: 'Glass dropper bottles in silver, gold, white and coloured finishes, 20ml and 30ml.',
+    cta: '/category/serum-dropper-bottles',
+    cat: 'serum-dropper-bottles',
   },
   {
-    kicker: 'Oil & Shampoo Bottles',
-    title: 'Every size, every cap — one roof',
-    text: 'PET, HDPE and glass bottles for oils, shampoos and lotions, with pumps, flip-tops and sprays.',
-    cta: '/category/oil-shampoo',
-    cat: 'oil-shampoo',
+    kicker: 'Pump, Lotion & Feeder Bottles',
+    title: 'Every size, every pump — one roof',
+    text: 'Foundation pumps, lotion bottles and 300ml feeder bottles for salons, spas and skincare brands.',
+    cta: '/category/pump-lotion-bottles',
+    cat: 'pump-lotion-bottles',
   },
 ]
 
 const USP = [
   { Icon: IconShield, title: 'The Name of Trust', text: 'Serving Shah Alam Market, Lahore with consistent quality.' },
-  { Icon: IconBox, title: 'Bulk availability', text: 'Wholesale quantities ready — pharma, cosmetic and food packing.' },
+  { Icon: IconBox, title: 'Bulk availability', text: 'Wholesale quantities ready — cosmetic, skincare and food packing.' },
   { Icon: IconTag, title: 'Reasonable pricing', text: 'Direct trader rates without the middle-man markup.' },
   { Icon: IconTruck, title: 'Nationwide dispatch', text: 'We arrange delivery across Pakistan on confirmed orders.' },
 ]
@@ -73,14 +72,13 @@ const heroImage = (catSlug) => {
 export default function Home() {
   usePageMeta(
     null,
-    `${SITE.name} — ${SITE.slogan}. Pharmaceutical, cosmetic and food packaging: jars, serum bottles, shampoo bottles, tubes and filling machines. ${SITE.address}.`
+    `${SITE.name} — ${SITE.slogan}. Cosmetic packaging: airless bottles, pump and lotion bottles, serum bottles, jars, tubes and more. ${SITE.address}.`
   )
 
   const catPrev = useRef(null)
   const catNext = useRef(null)
 
   const featured = featuredProducts(12)
-  const deals = dealProducts(12)
   const arrivals = newArrivals(12)
 
   return (
@@ -137,14 +135,14 @@ export default function Home() {
             <div className="banner-ad small block-2" style={{ background: '#fff4e0' }}>
               <div className="hero-slide row g-0 w-100 align-items-center">
                 <div className="col-7 banner-content">
-                  <span className="categories d-block mb-1">Empty Tubes</span>
-                  <h3 className="banner-title mb-3">Cosmetic &amp; pharma tubes</h3>
-                  <Link to="/category/empty-tubes" className="btn btn-sm btn-dark-solid rounded-3 px-3">
+                  <span className="categories d-block mb-1">Lip Gloss &amp; Mascara Tubes</span>
+                  <h3 className="banner-title mb-3">Clear tubes with wands &amp; brushes</h3>
+                  <Link to="/category/lip-gloss-tubes" className="btn btn-sm btn-dark-solid rounded-3 px-3">
                     Browse
                   </Link>
                 </div>
                 <div className="col-5 hero-media">
-                  {heroImage('empty-tubes') && <img src={heroImage('empty-tubes')} alt="" />}
+                  {heroImage('lip-gloss-tubes') && <img src={heroImage('lip-gloss-tubes')} alt="" />}
                 </div>
               </div>
             </div>
@@ -152,14 +150,14 @@ export default function Home() {
             <div className="banner-ad small block-3" style={{ background: '#e8f3f6' }}>
               <div className="hero-slide row g-0 w-100 align-items-center">
                 <div className="col-7 banner-content">
-                  <span className="categories d-block mb-1">Machinery</span>
-                  <h3 className="banner-title mb-3">Filling &amp; packing machines</h3>
-                  <Link to="/category/machine" className="btn btn-sm btn-dark-solid rounded-3 px-3">
+                  <span className="categories d-block mb-1">Jars &amp; Tins</span>
+                  <h3 className="banner-title mb-3">Jars, tins &amp; candle jars</h3>
+                  <Link to="/category/jars-tins" className="btn btn-sm btn-dark-solid rounded-3 px-3">
                     Browse
                   </Link>
                 </div>
                 <div className="col-5 hero-media">
-                  {heroImage('machine') && <img src={heroImage('machine')} alt="" />}
+                  {heroImage('jars-tins') && <img src={heroImage('jars-tins')} alt="" />}
                 </div>
               </div>
             </div>
@@ -234,14 +232,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- Deals ---------- */}
-      <ProductCarousel
-        sub="Limited time"
-        title="Best discounts this week"
-        products={deals}
-        viewAll="/shop?sort=discount"
-      />
-
       {/* ---------- Mid-page WhatsApp CTA ---------- */}
       <section className="py-5">
         <div className="container-fluid">
@@ -275,7 +265,7 @@ export default function Home() {
                   className="btn btn-outline-light btn-lg rounded-3 d-inline-flex align-items-center gap-2 ms-lg-2"
                 >
                   <IconPhone size={20} />
-                  {SITE.phones[0]}
+                  {SITE.phones[0]} · {SITE.contactPerson}
                 </a>
               </div>
             </div>
@@ -294,7 +284,7 @@ export default function Home() {
             <h2>Top picks from our biggest departments</h2>
           </div>
           <div className="row g-4">
-            {['pharma-jar', 'oil-shampoo', 'cream-jar'].map((slug) => {
+            {['pump-lotion-bottles', 'jars-tins', 'serum-dropper-bottles'].map((slug) => {
               const cat = CATEGORIES.find((c) => c.slug === slug)
               const items = queryProducts({ category: slug }).slice(0, 3)
               return (
@@ -330,8 +320,8 @@ export default function Home() {
                 {SITE.name} — {SITE.slogan}
               </h2>
               <p>
-                We supply high quality bottles, jars, capsules and cosmetic packaging from Shah Alam
-                Market, Lahore. Pharmaceutical, cosmetic and food packing items are all available
+                We supply high quality bottles, jars, tubes and cosmetic packaging from Shah Alam
+                Market, Lahore. Cosmetic, skincare and food packing items are all available
                 under one roof, in retail and in bulk.
               </p>
               <p className="urdu">
@@ -343,7 +333,7 @@ export default function Home() {
                   More about us
                 </Link>
                 <Link to="/shop" className="btn btn-outline-light rounded-3 px-4">
-                  Browse {PRODUCTS.length}+ products
+                  Browse {PRODUCTS.length} products
                 </Link>
               </div>
             </div>

@@ -72,6 +72,7 @@ export default function Contact() {
                         {p}
                       </a>
                     ))}
+                    <small className="d-block text-muted">{SITE.contactPerson}</small>
                   </span>
                 </li>
                 <li className="d-flex gap-3 mb-4">
@@ -142,7 +143,7 @@ export default function Contact() {
                         className="form-control rounded-3"
                         value={form.message}
                         onChange={set('message')}
-                        placeholder="e.g. 500 x 250cc HDPE pharma jars with aluminium cap — please share rate and delivery to Karachi."
+                        placeholder="e.g. 500 x 50ml airless bottles — please share rate and delivery to Karachi."
                       />
                     </div>
                     <div className="col-12">

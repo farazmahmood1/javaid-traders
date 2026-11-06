@@ -6,7 +6,7 @@ import CategoryCard from '../components/CategoryCard'
 export default function Categories() {
   usePageMeta(
     'Categories',
-    'All JD Trader departments: pharma jars, cream jars, serum bottles, oil and shampoo bottles, empty tubes, airless bottles, food jars, pouches and filling machines.'
+    'All JD Trader departments: airless bottles, pump and lotion bottles, spray and mist bottles, serum bottles, roll-on bottles, jars and tins, lip gloss tubes and more.'
   )
 
   return (

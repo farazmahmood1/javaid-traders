@@ -39,7 +39,7 @@ export default function Shop({ mode = 'shop' }) {
     heading,
     catInfo
       ? `${catInfo.name} — ${catInfo.count} products available at wholesale rates from JD Trader, Shah Alam Market Lahore.`
-      : 'Browse the full JD Trader catalogue: pharma jars, cream jars, serum bottles, shampoo bottles, tubes, pouches and filling machines.'
+      : 'Browse the full JD Trader catalogue: airless bottles, pump and lotion bottles, serum bottles, jars, tubes and more.'
   )
 
   /** Writes one param and always resets paging, so filters never land on an empty page. */

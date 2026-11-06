@@ -32,8 +32,8 @@ export default function Footer() {
               </span>
             </div>
             <p className="small mb-3" style={{ maxWidth: 380 }}>
-              High quality bottles, jars, capsules and cosmetic packaging — pharmaceutical,
-              cosmetic and food packing items under one roof. Best quality, reasonable price and
+              High quality bottles, jars, tubes and cosmetic packaging — cosmetic,
+              skincare and food packing items under one roof. Best quality, reasonable price and
               bulk availability.
             </p>
             <p className="urdu mb-3" style={{ maxWidth: 380, fontSize: '0.95rem' }}>
@@ -113,6 +113,7 @@ export default function Footer() {
                       {p}
                     </a>
                   ))}
+                  <small className="d-block">{SITE.contactPerson}</small>
                 </span>
               </li>
               <li className="d-flex gap-2 mb-3">

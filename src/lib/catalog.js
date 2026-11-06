@@ -1,14 +1,7 @@
 import data from '../data/products.json'
-import { PRODUCT_ADDITIONS, PRODUCT_OVERRIDES } from '../data/product-overrides'
 
 export const CATEGORIES = data.categories
-export const PRODUCTS = [
-  ...data.products.map((product) => ({
-    ...product,
-    ...PRODUCT_OVERRIDES[product.slug],
-  })),
-  ...PRODUCT_ADDITIONS,
-]
+export const PRODUCTS = data.products
 export const META = data.meta
 
 const bySlug = new Map(PRODUCTS.map((p) => [p.slug, p]))
@@ -20,7 +13,7 @@ export const getCategory = (slug) => catBySlug.get(slug)
 export const categoryNames = (product) =>
   (product.cats || []).map((s) => catBySlug.get(s)).filter(Boolean)
 
-/** Cheap searchable index built once, so filtering 860 products stays instant. */
+/** Cheap searchable index built once, so filtering stays instant. */
 const haystack = new Map(
   PRODUCTS.map((p) => [p.id, `${p.title} ${(p.cats || []).join(' ')}`.toLowerCase()])
 )
@@ -74,20 +67,16 @@ export function relatedProducts(product, limit = 10) {
     .slice(0, limit)
 }
 
-/** Deterministic pick so the homepage does not reshuffle on every render. */
-const pick = (list, n, seed = 7) => {
-  const out = []
-  for (let i = 0; out.length < n && i < list.length; i += seed) out.push(list[i])
-  return out
-}
-
+/** Products with a photo gallery first, then the rest — stable order, no reshuffling. */
 export const featuredProducts = (n = 12) =>
-  pick(PRODUCTS.filter((p) => p.images.length > 1 && !p.soldOut), n, 11)
+  [...PRODUCTS.filter((p) => p.images.length > 1), ...PRODUCTS.filter((p) => p.images.length <= 1)]
+    .filter((p) => !p.soldOut)
+    .slice(0, n)
 
 export const dealProducts = (n = 12) =>
   [...PRODUCTS].filter((p) => savingOf(p) > 0.1 && !p.soldOut).sort((a, b) => savingOf(b) - savingOf(a)).slice(0, n)
 
-export const newArrivals = (n = 12) => PRODUCTS.slice(0, n)
+export const newArrivals = (n = 12) => PRODUCTS.slice(-n).reverse()
 
 export const priceBounds = (() => {
   const prices = PRODUCTS.map((p) => p.price).filter((n) => n > 0)

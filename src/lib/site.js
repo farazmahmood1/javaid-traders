@@ -8,10 +8,11 @@ export const SITE = {
   slogan: 'The Name of Trust',
   sloganUr: 'اعتماد کا نام',
 
-  // TODO: replace with the real WhatsApp number (international format, no +, no spaces)
-  whatsapp: '923334231104',
+  // WhatsApp number in international format, no +, no spaces
+  whatsapp: '923034058545',
 
-  phones: ['0333-4231104', '0315-4231104'],
+  contactPerson: 'M.Anas',
+  phones: ['0303-4058545'],
   email: 'jdtrader.pk@gmail.com',
   address: 'Shah Alam Market, Lahore, Pakistan',
   addressUr: 'شاہ عالم مارکیٹ، لاہور',

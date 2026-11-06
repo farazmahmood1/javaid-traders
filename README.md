@@ -39,8 +39,8 @@ same file.
 | Route | What it does |
 |---|---|
 | `/` | Landing page: hero slider, categories, deals, featured, new arrivals |
-| `/shop` | All 862 products — department filter, sort, search, pagination (24/page) |
-| `/categories` | All 12 departments |
+| `/shop` | All 30 products — department filter, sort, search, pagination (24/page) |
+| `/categories` | All 8 departments |
 | `/category/:slug` | One department, same filter UI with the category locked |
 | `/product/:slug` | Gallery, description, spec table, WhatsApp order button, related items |
 | `/cart` | Enquiry list → one WhatsApp message |
@@ -66,26 +66,13 @@ To also put an Add-to-Cart button on the product page, add a button calling
 
 ## Product data
 
-`src/data/products.json` — **862 products in 12 categories**, scraped once from the old
-Shopify store's public JSON API (`/products.json`, `/collections/<handle>/products.json`).
+`src/data/products.json` — **30 products in 8 categories**, with images hosted at
+`https://dev.javedtraders.shop/`. Each product has a title, slug, description HTML,
+an `images` array (first is the main photo) and one category. Prices are `0` and show as
+"Price on request" until real rates are added.
 
-Contains: title, slug, price, compare-at price, images, options, description HTML,
-category assignment, stock flag.
-
-Product and category **images are hot-linked to `cdn.shopify.com`**. They load fast and
-cost nothing to host, but they stop working if the old Shopify store is closed. To make
-the site self-hosted, download the images and rewrite the `images` arrays — `img()` in
-[`src/lib/format.js`](src/lib/format.js) is the single place URLs are built.
-
-### Refreshing the data
-
-The old store is the source of truth. Re-run the scrape if the catalogue changes:
-`/products.json?limit=250&page=N` for products, and
-`/collections/<handle>/products.json` for category membership.
-
-**Note:** 147 products had no category on the old store; they were assigned by matching
-keywords in the title (rules are in the scrape script, e.g. `SERUM` → Serum Bottle,
-`TUBE` → Empty Tubes, `JAR` → Pharma Jar). Worth a quick eyeball before launch.
+To add or change a product, edit that file and keep each category's `count` in step.
+The previous 862-product Shopify catalogue was removed; it is still in git history.
 
 ---
 
@@ -108,7 +95,7 @@ npm run build     # deploy the dist/ folder
 
 ```
 src/
-├── data/products.json     scraped catalogue (862 products)
+├── data/products.json     catalogue (30 products, 8 categories)
 ├── lib/
 │   ├── site.js            ⚠️ WhatsApp number + all contact details
 │   ├── catalog.js         query / filter / sort / related-products
