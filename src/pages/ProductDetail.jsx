@@ -129,6 +129,33 @@ export default function ProductDetail() {
                 )}
               </p>
 
+              <div className="mb-4">
+                <h2 className="h5 mb-2">Product description</h2>
+                {product.desc ? (
+                  <div
+                    className={`product-desc ${descIsUrdu ? 'urdu' : ''}`}
+                    dangerouslySetInnerHTML={{ __html: product.desc }}
+                  />
+                ) : (
+                  <>
+                    <p className="text-muted">
+                      A detailed description for this item is not published yet. Message us on
+                      WhatsApp for full specifications — material, neck size, cap type and available
+                      colours.
+                    </p>
+                    <a
+                      href={productInquiry(product, qty)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-whatsapp rounded-3 d-inline-flex align-items-center gap-2"
+                    >
+                      <IconWhatsApp size={18} />
+                      Ask about this product
+                    </a>
+                  </>
+                )}
+              </div>
+
               {/* Options are informational: the exact variant is settled on WhatsApp. */}
               {product.options?.length > 0 && (
                 <div className="mb-4">
@@ -203,36 +230,8 @@ export default function ProductDetail() {
             </div>
           </div>
 
-          {/* ---------- Description ---------- */}
           <div className="row mt-5 pt-4 border-top g-4">
             <div className="col-lg-8">
-              <h2 className="h4 mb-3">Product description</h2>
-              {product.desc ? (
-                <div
-                  className={`product-desc ${descIsUrdu ? 'urdu' : ''}`}
-                  dangerouslySetInnerHTML={{ __html: product.desc }}
-                />
-              ) : (
-                <>
-                  <p className="text-muted">
-                    A detailed description for this item is not published yet. Message us on
-                    WhatsApp for full specifications — material, neck size, cap type and available
-                    colours.
-                  </p>
-                  <a
-                    href={productInquiry(product, qty)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-whatsapp rounded-3 d-inline-flex align-items-center gap-2"
-                  >
-                    <IconWhatsApp size={18} />
-                    Ask about this product
-                  </a>
-                </>
-              )}
-            </div>
-
-            <div className="col-lg-4">
               <h2 className="h4 mb-3">At a glance</h2>
               <table className="spec-table w-100">
                 <tbody>
