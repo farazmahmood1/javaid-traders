@@ -1,4 +1,5 @@
 import { CATEGORIES, PRODUCTS } from '../lib/catalog'
+import { SITE } from '../lib/site'
 import usePageMeta from '../lib/usePageMeta'
 import { Breadcrumbs } from '../components/Layout'
 import CategoryCard from '../components/CategoryCard'
@@ -6,7 +7,7 @@ import CategoryCard from '../components/CategoryCard'
 export default function Categories() {
   usePageMeta(
     'Categories',
-    'All JD Trader departments: airless bottles, pump and lotion bottles, spray and mist bottles, serum bottles, roll-on bottles, jars and tins, lip gloss tubes and more.'
+    `All ${SITE.name} departments: airless bottles, pump and lotion bottles, spray and mist bottles, serum bottles, roll-on bottles, jars and tins, lip gloss tubes and more.`
   )
 
   return (

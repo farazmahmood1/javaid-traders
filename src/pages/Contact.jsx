@@ -161,7 +161,7 @@ export default function Contact() {
 
               <div className="ratio ratio-16x9 rounded-4 overflow-hidden mt-4">
                 <iframe
-                  title="JD Trader location"
+                  title={`${SITE.name} location`}
                   src="https://www.google.com/maps?q=Shah%20Alam%20Market%20Lahore&output=embed"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"

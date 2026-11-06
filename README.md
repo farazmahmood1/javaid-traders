@@ -1,7 +1,7 @@
-# JD Trader — React catalogue site
+# JT Javed Traders — React catalogue site
 
-A React rebuild of [jdtrader.pk](https://www.jdtrader.pk/) (JD Trader / Jawad Bottle Store,
-Shah Alam Market, Lahore) on the **FoodMart** Bootstrap template.
+A React catalogue site for JT Javed Traders, Shah Alam Market, Lahore, built on the
+**FoodMart** Bootstrap template.
 
 It is a **catalogue, not a shop**: there is no checkout, no payment and no delivery form.
 Every order path ends on WhatsApp.
@@ -54,7 +54,7 @@ Per the brief, the **product detail page has no Add-to-Cart and no Buy button** 
 description and WhatsApp options. Items are added from the product cards in the listings
 and carousels (the cart icon on the card, or the "Add to cart" button).
 
-- Stored in `localStorage` under `jdtrader.cart.v1`
+- Stored in `localStorage` under the existing `jdtrader.cart.v1` key to preserve saved carts
 - Survives refresh; degrades gracefully if storage is blocked (private mode)
 - No checkout. "Send order on WhatsApp" builds a single Urdu message listing every item,
   quantity, line total and an estimated total

@@ -26,8 +26,8 @@ export default function About() {
                 {SITE.name} — {SITE.slogan}
               </h1>
               <p>
-                {SITE.name}, also known as {SITE.tagline}, supplies high quality bottles, jars,
-                tubes and cosmetic packaging from {SITE.address}. Cosmetic, skincare and
+                {SITE.name} supplies high quality bottles, jars, tubes and cosmetic packaging
+                from {SITE.address}. Cosmetic, skincare and
                 food packing items are available under one roof — in retail and in bulk.
               </p>
               <p>
@@ -37,8 +37,8 @@ export default function About() {
                 salt grinders.
               </p>
               <p className="urdu">
-                جے ڈی ٹریڈر (جواد بوتل اسٹور) — اعتماد کا نام۔ ہم شاہ عالم مارکیٹ، لاہور سے اعلیٰ
-                کوالٹی کی بوتلیں، جار، کیپسول اور کاسمیٹک پیکجنگ فراہم کرتے ہیں۔ فارماسیوٹیکل،
+                جے ٹی جاوید ٹریڈرز — اعتماد کا نام۔ ہم شاہ عالم مارکیٹ، لاہور سے اعلیٰ کوالٹی کی
+                بوتلیں، جار، کیپسول اور کاسمیٹک پیکجنگ فراہم کرتے ہیں۔ فارماسیوٹیکل،
                 کاسمیٹک اور فوڈ پیکنگ کا سامان ایک ہی چھت کے نیچے — ریٹیل اور بلک، دونوں میں
                 دستیاب۔
               </p>

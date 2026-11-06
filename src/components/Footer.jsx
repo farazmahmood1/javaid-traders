@@ -22,7 +22,7 @@ export default function Footer() {
           <div className="col-lg-4">
             <div className="d-flex align-items-center gap-2 mb-3">
               <img
-                src="/images/logo.jpg"
+                src="/images/logo.png"
                 alt={SITE.name}
                 style={{ height: 52, borderRadius: 8 }}
               />

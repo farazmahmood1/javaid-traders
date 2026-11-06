@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link, useParams, useSearchParams } from 'react-router-dom'
 import { CATEGORIES, SORTS, getCategory, queryProducts } from '../lib/catalog'
+import { SITE } from '../lib/site'
 import usePageMeta from '../lib/usePageMeta'
 import { Breadcrumbs } from '../components/Layout'
 import ProductCard from '../components/ProductCard'
@@ -38,8 +39,8 @@ export default function Shop({ mode = 'shop' }) {
   usePageMeta(
     heading,
     catInfo
-      ? `${catInfo.name} — ${catInfo.count} products available at wholesale rates from JD Trader, Shah Alam Market Lahore.`
-      : 'Browse the full JD Trader catalogue: airless bottles, pump and lotion bottles, serum bottles, jars, tubes and more.'
+      ? `${catInfo.name} — ${catInfo.count} products available at wholesale rates from ${SITE.name}, Shah Alam Market Lahore.`
+      : `Browse the full ${SITE.name} catalogue: airless bottles, pump and lotion bottles, serum bottles, jars, tubes and more.`
   )
 
   /** Writes one param and always resets paging, so filters never land on an empty page. */

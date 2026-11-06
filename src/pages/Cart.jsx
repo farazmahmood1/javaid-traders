@@ -10,7 +10,7 @@ import { IconPhone, IconTrash, IconWhatsApp } from '../components/Icons'
 
 export default function Cart() {
   const { items, total, count, setQty, remove, clear } = useCart()
-  usePageMeta('My Cart', 'Review your selected products and send the list to JD Trader on WhatsApp.')
+  usePageMeta('My Cart', `Review your selected products and send the list to ${SITE.name} on WhatsApp.`)
 
   return (
     <>

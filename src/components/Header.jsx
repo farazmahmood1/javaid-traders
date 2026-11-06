@@ -60,7 +60,7 @@ export default function Header() {
           <div className="col-6 col-lg-3">
             <div className="main-logo">
               <Link to="/" className="d-inline-flex align-items-center gap-2">
-                <img src="/images/logo.jpg" alt={SITE.name} />
+                <img src="/images/logo.png" alt={SITE.name} />
                 <span className="lh-1">
                   <span className="d-block fw-bold fs-6 fs-sm-5 text-dark">{SITE.name}</span>
                   <small className="text-muted d-none d-sm-block">{SITE.tagline}</small>

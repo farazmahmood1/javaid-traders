@@ -3,8 +3,8 @@
  * Update the WhatsApp number here and it changes everywhere on the site.
  */
 export const SITE = {
-  name: 'JD Trader',
-  tagline: 'Jawad Bottle Store',
+  name: 'JT Javed Traders',
+  tagline: 'Cosmetics Packaging',
   slogan: 'The Name of Trust',
   sloganUr: 'اعتماد کا نام',
 
