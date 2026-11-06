@@ -231,7 +231,7 @@ export default function ProductDetail() {
           </div>
 
           <div className="row mt-5 pt-4 border-top g-4">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <h2 className="h4 mb-3">At a glance</h2>
               <table className="spec-table w-100">
                 <tbody>
