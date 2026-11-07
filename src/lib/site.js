@@ -3,7 +3,7 @@
  * Update the WhatsApp number here and it changes everywhere on the site.
  */
 export const SITE = {
-  name: 'JT Javed Traders',
+  name: 'Javed Traders',
   tagline: 'Cosmetics Packaging',
   slogan: 'The Name of Trust',
   sloganUr: 'اعتماد کا نام',
@@ -13,14 +13,14 @@ export const SITE = {
 
   contactPerson: 'M.Anas',
   phones: ['0303-4058545'],
-  email: 'jdtrader.pk@gmail.com',
+  email: 'Anasshiekh1377@gmail.com',
   address: 'Shah Alam Market, Lahore, Pakistan',
   addressUr: 'شاہ عالم مارکیٹ، لاہور',
   hours: 'Mon – Sat, 10:00 AM – 8:00 PM',
 
   social: {
-    facebook: 'https://www.facebook.com/',
-    instagram: 'https://www.instagram.com/',
+    facebook: 'https://www.facebook.com/share/1CjeJAZvuY/?mibextid=wwXIfr',
+    instagram: 'https://www.instagram.com/javedtraders_?dlrf=MXZlOHFtdzk0MGh5cA%3D%3D&utm_source=qr',
     youtube: 'https://www.youtube.com/',
   },
 }

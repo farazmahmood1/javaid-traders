@@ -7,18 +7,18 @@ const open = (text) => `${base()}?text=${encodeURIComponent(text)}`
 
 /** Generic "talk to us" link used in the header, footer and floating button. */
 export const chatLink = () =>
-  open(`السلام علیکم ${SITE.name}!\nمجھے آپ کے پروڈکٹس کے بارے میں معلومات چاہیے۔`)
+  open(`Hello ${SITE.name}!\nI would like information about your products.`)
 
 /** Product page → asks about one specific item, with the link so JD knows which. */
 export const productInquiry = (product, qty = 1) =>
   open(
     [
-      `السلام علیکم ${SITE.name}!`,
+      `Hello ${SITE.name}!`,
       '',
-      `مجھے یہ پروڈکٹ چاہیے:`,
+      `I am interested in this product:`,
       `*${niceTitle(product.title)}*`,
-      `قیمت: ${money(product.price)}`,
-      qty > 1 ? `تعداد: ${qty}` : null,
+      `Price: ${money(product.price)}`,
+      qty > 1 ? `Quantity: ${qty}` : null,
       '',
       `${window.location.origin}/product/${product.slug}`,
     ]
@@ -30,19 +30,19 @@ export const productInquiry = (product, qty = 1) =>
 export const cartInquiry = (items, total) =>
   open(
     [
-      `السلام علیکم ${SITE.name}!`,
+      `Hello ${SITE.name}!`,
       '',
-      `مجھے درج ذیل پروڈکٹس کی قیمت اور دستیابی چاہیے:`,
+      `Please share the price and availability for these products:`,
       '',
       ...items.map(
         (it, i) =>
-          `${i + 1}. ${niceTitle(it.title)}\n   تعداد: ${it.qty} × ${money(it.price)} = ${money(
+          `${i + 1}. ${niceTitle(it.title)}\n   Quantity: ${it.qty} × ${money(it.price)} = ${money(
             it.qty * it.price
           )}`
       ),
       '',
-      `*کل تخمینہ: ${money(total)}*`,
+      `*Estimated total: ${money(total)}*`,
       '',
-      'شکریہ!',
+      'Thank you!',
     ].join('\n')
   )

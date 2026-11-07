@@ -19,12 +19,12 @@ export default function Contact() {
 
   const href = () => {
     const lines = [
-      `السلام علیکم ${SITE.name}!`,
+      `Hello ${SITE.name}!`,
       '',
-      form.name && `نام: ${form.name}`,
-      form.city && `شہر: ${form.city}`,
+        form.name && `Name: ${form.name}`,
+        form.city && `City: ${form.city}`,
       form.message && '',
-      form.message || 'مجھے آپ کے پروڈکٹس کے بارے میں معلومات چاہیے۔',
+        form.message || 'I would like information about your products.',
     ].filter((l) => l !== false && l !== undefined)
     return `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(lines.join('\n'))}`
   }

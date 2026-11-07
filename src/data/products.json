@@ -391,19 +391,6 @@
       "desc": "<p>Matte black aluminium tins in 10gm and 30gm with screw lids. For lip balms, salves, creams and solid perfumes.</p>"
     },
     {
-      "id": "jt-25",
-      "slug": "premium-majoon-jar-100gm-frosted-plastic",
-      "title": "Premium Majoon Jar 100gm (frosted plastic)",
-      "price": 0,
-      "cats": [
-        "jars-tins"
-      ],
-      "images": [
-        "https://dev.javedtraders.shop/premium-majoon-jars.png"
-      ],
-      "desc": "<p>100gm frosted plastic jar with a cork lid and a matching spoon. For majoon, herbs, tablets and powders.</p>"
-    },
-    {
       "id": "jt-26",
       "slug": "premium-majoon-jar-gold-and-silver-glass",
       "title": "Premium Majoon Jar, Gold & Silver (glass)",

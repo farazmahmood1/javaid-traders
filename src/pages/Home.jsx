@@ -63,6 +63,12 @@ const USP = [
   { Icon: IconTruck, title: 'Nationwide dispatch', text: 'We arrange delivery across Pakistan on confirmed orders.' },
 ]
 
+const STICKERING_VIDEOS = [
+  { src: 'https://dev.javedtraders.shop/printing-or-stickering-3.mp4', title: 'Packaging service in action' },
+  { src: 'https://dev.javedtraders.shop/printing-or-stickering-2.mp4', title: 'Product stickering' },
+  { src: 'https://dev.javedtraders.shop/printing-or-stickering.mp4', title: 'Printing and finishing' },
+]
+
 /** Picks a representative product image for a hero/promo slot. */
 const heroImage = (catSlug) => {
   const p = queryProducts({ category: catSlug }).find((x) => x.images.length)
@@ -229,6 +235,38 @@ export default function Home() {
               </SwiperSlide>
             ))}
           </Swiper>
+        </div>
+      </section>
+
+      {/* ---------- Stickering and packaging service ---------- */}
+      <section className="py-5">
+        <div className="container-fluid">
+          <div className="section-title">
+            <span className="sub d-block mb-1">Additional service</span>
+            <h2>Stickering and Packaging</h2>
+            <p className="text-muted mt-2 mb-0">
+              Get your products ready for the shelf with our stickering, printing and packaging service.
+            </p>
+          </div>
+          <div className="row g-4">
+            {STICKERING_VIDEOS.map((video) => (
+              <div className="col-md-6 col-lg-4" key={video.src}>
+                <article className="service-video-card h-100">
+                  <video
+                    className="service-video"
+                    controls
+                    preload="metadata"
+                    playsInline
+                    aria-label={video.title}
+                  >
+                    <source src={video.src} type="video/mp4" />
+                    Your browser does not support embedded videos.
+                  </video>
+                  <h3 className="h6 mb-0 mt-3">{video.title}</h3>
+                </article>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

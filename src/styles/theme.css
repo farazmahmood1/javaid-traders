@@ -1,5 +1,5 @@
 /*
-  JT Javed Traders - theme styles.
+  Javed Traders - theme styles.
   Built on the FoodMart Bootstrap template (templatesjungle.com), re-tuned for a
   packaging/wholesale catalogue: no checkout, WhatsApp as the conversion path.
 */
@@ -699,6 +699,22 @@ a { text-decoration: none; }
   align-items: center;
   justify-content: center;
   margin-bottom: 0.85rem;
+}
+
+.service-video-card {
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #f1f1f1;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+.service-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: #1f2430;
+  border-radius: 12px;
 }
 
 .breadcrumb-bar {
